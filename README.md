@@ -5,3 +5,4 @@
 - [Phase 3. Rhetorical role prediction](phase3/)
 - [Phase 4. Court judgment prediction](phase4/)
 - [Phase 5. Legal statute identification](phase5/)
+- [Phase 7. Prior case retrieval](phase7/)
