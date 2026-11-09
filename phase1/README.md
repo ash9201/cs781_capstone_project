@@ -44,3 +44,11 @@ The Phase 1 folder includes `phase1_efficient_500m_continuation.ipynb`, which re
 3. **Evaluate and export.** Run the corresponding evaluation notebook with the prepared folder and the trained run containing `best_model.pt`. Set `PREP_DIR` and `RUN_DIR` in the local notebooks, or `PREP_INPUT` and `RUN_INPUT` in the decoder evaluation notebook. I mainly used top-p sampling at 0.95 with a temperature of 1.0. I also tested greedy decoding and added repetition controls for the encoder-decoder and continued efficient model. Set `GENERATE_OFFICIAL_TEST = False` for held-out evaluation only. To export the CodaBench ZIP, enable it and select a scored decoding setting. The first BERTScore run needs access to download its scoring model.
 
 The notebooks generate the model weights and prepared caches. I keep those files outside the repository.
+
+### References
+
+- Transformer architecture, sinusoidal positions and cross-attention. [Attention Is All You Need](https://arxiv.org/abs/1706.03762)
+- Attention masking for the shared prefix model. [UniLM](https://arxiv.org/abs/1905.03197)
+- Grouped-query and sliding-window attention. [GQA](https://arxiv.org/abs/2305.13245) and [Mistral 7B](https://arxiv.org/abs/2310.06825)
+- Top-p sampling for generation. [The Curious Case of Neural Text Degeneration](https://arxiv.org/abs/1904.09751)
+- Text generation evaluation. [BERTScore](https://arxiv.org/abs/1904.09675)
