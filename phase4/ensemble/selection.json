@@ -1,0 +1,12 @@
+{
+  "family": "gold_plus_prefix",
+  "export_name": "cjpe_gold_prefix_ensemble_001",
+  "weights": {
+    "efficient_gold": 0.75,
+    "prefix": 0.25
+  },
+  "threshold": 0.4,
+  "comparison": "Predict class 1 when the float64 weighted mean of the archived class-1 probabilities is greater than or equal to 0.40.",
+  "reason": "This blend attained the highest full-dev macro-F1 in the declared 21-candidate search. Its family also had the highest repeated-fold mean, with two source models. The decision used dev labels only.",
+  "validation_caveat": "Repeated folds evaluate weight and threshold fitting after checkpoint selection. The source checkpoints already used the full dev set. Family-specific fold scores also precede choosing the final family, so the overall candidate-selector result is reported separately."
+}
